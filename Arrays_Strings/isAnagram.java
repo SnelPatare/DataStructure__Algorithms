@@ -16,9 +16,7 @@ public class isAnagram {
             counter1.put(t.charAt(i), 1+counter1.getOrDefault(t.charAt(i),0));
         }
         return counter.equals(counter1);
-        
-        
-        
+
     }
 
     public static void main(String[] args){
