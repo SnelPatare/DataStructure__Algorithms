@@ -30,8 +30,8 @@ public class grpAnagram {
                 count[c-'a']++;
             }
             String key = Arrays.toString(count);
-            res.putIfAbsent(key.toString(), new ArrayList<>());
-            res.get(key.toString()).add(s);
+            res.putIfAbsent(key, new ArrayList<>());
+            res.get(key).add(s);
         }
         return new ArrayList<>(res.values());
 
