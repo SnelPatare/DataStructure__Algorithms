@@ -4,6 +4,9 @@ import java.util.Arrays;
 
 public class productexceptself {
      public int[] productExceptSelf(int[] nums) {
+
+        //O(n2) runtime 
+
         // int[] res = new int[nums.length];
         // for(int i =0; i<nums.length;i++){
         //     int product = 1;
@@ -42,6 +45,7 @@ public class productexceptself {
         // }
         // return res;
 
+        //O(n) runtime O(1) space
         int[] res = new int[nums.length];
         res[0] = 1;
         for (int i =1; i< nums.length;i++){
@@ -63,5 +67,4 @@ public class productexceptself {
         productexceptself obj = new productexceptself();
         System.out.println(Arrays.toString(obj.productExceptSelf(nums)));
     }
-    
 }
