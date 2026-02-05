@@ -35,7 +35,7 @@ class Solution {
                     if (node.right!= null) q.add(node.right);
                 }
                 result.add(largestValue.val);
-                largestValue = null;
+                
             }
         return result;
     }
