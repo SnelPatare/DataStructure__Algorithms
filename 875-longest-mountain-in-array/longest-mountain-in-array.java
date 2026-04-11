@@ -3,11 +3,11 @@ class Solution {
         int n = arr.length;
         int ans = 0;
 
-        for(int i =1; i <= n-2;){
-            int count = 1;
-            if (arr[i] > arr[i+1] && arr[i] > arr[i-1]){   
-                int j =i;
-                while(j > 0 && arr[j] > arr[j-1]){
+        for(int i =1; i <=n-2;){
+            int count =1;
+            if(arr[i] > arr[i+1] && arr[i] > arr[i-1]){
+                int j =i; // we found peek;
+                while(j >0 && arr[j] > arr[j-1]){
                     j--;
                     count++;
                 }
@@ -15,14 +15,12 @@ class Solution {
                     i++;
                     count++;
                 }
-                ans = Math.max(ans, count);
-            }
-            else{
+                ans = Math.max(count,ans);
+            }else{
                 i++;
             }
-
-            
         }
-    return ans;
+        return ans;
+        
     }
 }
